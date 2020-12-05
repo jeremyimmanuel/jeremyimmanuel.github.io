@@ -1,21 +1,20 @@
 <template>
-  <div class="main-container">
+  <div id="app">
     <the-title />
-    <p class="content">
-      Hello this is Jeremy's personal website
-    </p>
+    <the-content />
 
     <a href="https://github.com/jeremyimmanuel">github</a>
   </div>
-
 </template>
 
 <script>
 import TheTitle from '../src/components/TheTitle';
+import TheContent from '../src/components/TheContent';
 export default {
   name: 'App',
   components: {
-    TheTitle
+    TheTitle,
+    TheContent
   }
 }
 </script>
@@ -30,10 +29,6 @@ body {
   color: #6DB1BF;
   background: #ffeaec;
   margin: 0 20%;
-}
-
-.main-container {
-  /* margin: 0 auto; */
 }
 
 .container {
