@@ -3,18 +3,21 @@
     <the-title />
     <the-content />
 
-    <a href="https://github.com/jeremyimmanuel">github</a>
+    <the-links />
   </div>
 </template>
 
 <script>
 import TheTitle from '../src/components/TheTitle';
 import TheContent from '../src/components/TheContent';
+import TheLinks from '../src/components/TheLinks';
+
 export default {
   name: 'App',
   components: {
     TheTitle,
-    TheContent
+    TheContent,
+    TheLinks
   }
 }
 </script>
