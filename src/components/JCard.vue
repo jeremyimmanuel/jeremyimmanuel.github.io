@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>This is JCard</h2>
+    <div class='card'>
+        <slot />
     </div>
 </template>
 
@@ -11,5 +11,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../styles/_globals.scss';
+
+.card {
+    display: inline-block;
+    background:  $secondary;
+    color: $primary;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
 
 </style>

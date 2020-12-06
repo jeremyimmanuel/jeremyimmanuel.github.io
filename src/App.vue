@@ -2,7 +2,9 @@
   <div>
     <the-title />
     <the-content />
-
+    <j-card>
+      hello there
+    </j-card>
     <the-links />
   </div>
 </template>
@@ -24,6 +26,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import 'styles/_globals.scss';
 
 body {
   font-family: 'Open Sans', Avenir, Helvetica, Arial, sans-serif;
