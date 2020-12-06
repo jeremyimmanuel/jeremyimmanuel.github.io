@@ -7,6 +7,7 @@
         >
             <img :src="value.icon" >
         </a>
+        <j-card></j-card>
     </div>
 </template>
 

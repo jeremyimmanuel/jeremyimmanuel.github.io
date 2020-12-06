@@ -1,4 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { globalyRegisterBaseComponents } from './initUtils'
+// import { globalyRegisterBaseComponents } from './initUtils'
 
-createApp(App).mount('#app')
+// globalyRegisterBaseComponents(Vue)
+
+const app = createApp(App)
+
+globalyRegisterBaseComponents(app)
+
+app.mount('#app')
+

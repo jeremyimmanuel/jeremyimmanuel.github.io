@@ -11,7 +11,7 @@ export const getComponentName = (fileName) => fileName
   .map((kebab) => kebab.charAt(0).toUpperCase() + kebab.slice(1))
   .join('')
 
-export const globalyRegisterBaseComponents = (Vue) => {
+export const globalyRegisterBaseComponents = (app) => {
   // https://webpack.js.org/guides/dependency-management/#require-context
   const requireComponent = require.context(
     // Look for files in components directory
@@ -29,6 +29,6 @@ export const globalyRegisterBaseComponents = (Vue) => {
     const componentName = getComponentName(fileName)
 
     // Globally register the component
-    Vue.component(componentName, componentConfig.default || componentConfig)
+    app.component(componentName, componentConfig.default || componentConfig)
   })
 }
