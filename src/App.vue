@@ -2,9 +2,6 @@
   <div>
     <the-title />
     <the-content />
-    <j-card>
-      <h1>Hello There</h1>
-    </j-card>
     <the-links />
   </div>
 </template>
@@ -26,6 +23,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 @import 'styles/_globals.scss';
 
 body {
@@ -39,6 +37,10 @@ body {
 
 .container {
   color: white;
+}
+
+p {
+  font-family: 'Spartan','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {
