@@ -3,7 +3,7 @@
     <the-title />
     <the-content />
     <j-card>
-      hello there
+      <h1>Hello There</h1>
     </j-card>
     <the-links />
   </div>
