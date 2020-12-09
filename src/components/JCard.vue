@@ -15,12 +15,12 @@ export default {
 
 .card {
     display: inline-block;
-    background:  $secondary;
+    background: $accent;
     color: $primary;
     margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 10px 20px; 
+    padding: 10px 20px;
     transition: all .2s ease-in-out;
 }
 

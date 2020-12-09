@@ -1,7 +1,10 @@
 <template>
-    <j-card>
-        
-            <h2>
+    <div>
+        <j-card
+            class="card"
+            @click="show = !show"
+        >
+            <h2 class="title">
                 {{ title }}
             </h2>
             <div class='subtitle'>
@@ -10,18 +13,29 @@
                 </span>
                 <span id='date'>{{ date }}</span>
             </div>
-            <ul>
-                <li class='task' v-for='task in tasks' :key='task'>
-                    {{ task }}
-                </li>
-            </ul>
-        
-    </j-card>
+            <transition name="fade">
+                <ul
+                    v-if="show"
+                    class="tasks"
+                >
+                    <li class='task' v-for='task in tasks' :key='task'>
+                        {{ task }}
+                    </li>
+                </ul>
+            </transition>
+        </j-card>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'ExperienceCard',
+
+    data () {
+        return {
+            show: false
+        }
+    },
 
     props: {
         title: String,
@@ -33,7 +47,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+.card {
+    width: 280px;
+    height: 210px;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 20px;
+}
+
 
 .subtitle {
     display: flex;
@@ -48,6 +71,6 @@ export default {
 
 .task {
     font-family: 'Spartan';
+    font-size: 14px;
 }
-
 </style>
